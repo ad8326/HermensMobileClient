@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="NO" useTraitCollections="YES" colorMatched="YES" initialViewController="VC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18104"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="VC" customClass="ViewController" customModule="HermensMobileClient" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="vJv-3F-J7G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Hermens mobile client ready." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="statusLabel">
+                                <rect key="frame" x="20" y="220" width="374" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="syncButton">
+                                <rect key="frame" x="107" y="330" width="200" height="50"/>
+                                <state key="normal" title="Sync Hermens"/>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="statusLabel" firstAttribute="centerX" secondItem="vJv-3F-J7G" secondAttribute="centerX" id="statusCenterX"/>
+                            <constraint firstItem="statusLabel" firstAttribute="top" secondItem="vJv-3F-J7G" secondAttribute="top" constant="180" id="statusTop"/>
+                            <constraint firstItem="syncButton" firstAttribute="centerX" secondItem="vJv-3F-J7G" secondAttribute="centerX" id="buttonCenterX"/>
+                            <constraint firstItem="syncButton" firstAttribute="top" secondItem="statusLabel" secondAttribute="bottom" constant="40" id="buttonTop"/>
+                            <constraint firstItem="syncButton" firstAttribute="width" constant="200" id="buttonWidth"/>
+                            <constraint firstItem="syncButton" firstAttribute="height" constant="50" id="buttonHeight"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                    <connections>
+                        <outlet property="statusLabel" destination="statusLabel" id="statusLabelConnection"/>
+                        <action selector="syncButtonTapped:" destination="VC" eventType="touchUpInside" id="syncButtonTappedAction"/>
+                    </connections>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FirstResponder" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

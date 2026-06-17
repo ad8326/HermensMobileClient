@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18104"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="vlc-1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vJv-3F-J7G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hermens Mobile Client" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="1" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="launchLabel">
+                                <rect key="frame" x="57" y="414" width="300" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="launchLabel" firstAttribute="centerX" secondItem="vJv-3F-J7G" secondAttribute="centerX" id="launchCenterX"/>
+                            <constraint firstItem="launchLabel" firstAttribute="centerY" secondItem="vJv-3F-J7G" secondAttribute="centerY" id="launchCenterY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FirstResponder" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
