@@ -1,0 +1,29 @@
+# Xcode
+.DS_Store
+build/
+DerivedData/
+*.pbxuser
+*.xcuserstate
+*.xcworkspace
+xcuserdata/
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+
+# Swift Package Manager
+/.build/
+/.swiftpm/
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+
+# Archives
+*.xcarchive
