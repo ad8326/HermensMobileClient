@@ -17,7 +17,9 @@ class HermensService {
     static let shared = HermensService()
     private init() {}
 
-    private let baseURL = URL(string: "https://hermens.example.com/api")
+    /// iOS clients should talk only to the Spring Boot backend.
+    /// Change this URL to the actual backend host in deployment.
+    private let baseURL = URL(string: "http://127.0.0.1:8080/api/hermens")
 
     func requestStatus() async throws -> String {
         guard let url = baseURL?.appendingPathComponent("status") else {

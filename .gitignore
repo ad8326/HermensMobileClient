@@ -27,3 +27,6 @@ fastlane/screenshots/
 
 # Archives
 *.xcarchive
+
+# Backend Maven
+/backend/target/

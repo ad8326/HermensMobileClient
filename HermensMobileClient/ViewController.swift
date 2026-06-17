@@ -12,14 +12,20 @@ class ViewController: UIViewController {
     @IBAction private func syncButtonTapped(_ sender: UIButton) {
         statusLabel.text = "Connecting to Hermens..."
         Task {
-            await connectToHermens()
+            await loginAndFetchStatus()
         }
     }
 
-    private func connectToHermens() async {
+    private func loginAndFetchStatus() async {
         do {
-            let result = try await HermensService.shared.requestStatus()
-            await updateStatus("Hermens response: \(result)")
+            let loginResponse = try await HermensAPI.shared.login(username: "admin", password: "password")
+            guard loginResponse.status == "success" else {
+                await updateStatus("登录失败：\(loginResponse.message ?? "未知错误")")
+                return
+            }
+
+            let statusResponse = try await HermensAPI.shared.requestStatus()
+            await updateStatus("Hermens response: \(statusResponse.status) \(statusResponse.message ?? "")")
         } catch {
             await updateStatus("连接失败：\(error.localizedDescription)")
         }
